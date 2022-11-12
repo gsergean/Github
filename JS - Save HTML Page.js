@@ -19,19 +19,19 @@ if (	   pathArray[1] == "mcquiz"
 	|| pathArray[1] == "geschiedenisquiz"
 	|| pathArray[1] == "literatuurquiz"
 	|| pathArray[1] == "themaquiz") {
-	/* $.getScript("http://localhost/QATOOLS/myscripts - weekquiz.js"); */
-	$.getScript("http://localhost/QATOOLS/myscripts - weekquiz - huidig seizoen.js");
+	/* $.getScript("https://gsergean.github.io/Github/myscripts - weekquiz.js"); */
+	$.getScript("https://gsergean.github.io/Github/myscripts - weekquiz - huidig seizoen.js");
 } else if (pathArray[1] == "fotoquiz") {
-	$.getScript("http://localhost/QATOOLS/myscripts - fotoquiz.js");
+	$.getScript("https://gsergean.github.io/Github/myscripts - fotoquiz.js");
 } else if (pathArray[1] == "invulquiz") {
-	$.getScript("http://localhost/QATOOLS/myscripts - invulquiz.js");
+	$.getScript("https://gsergean.github.io/Github/myscripts - invulquiz.js");
 } else if (pathArray[1] == "challengequiz") {
-	$.getScript("http://localhost/QATOOLS/myscripts - challengequiz.js");
+	$.getScript("https://gsergean.github.io/Github/myscripts - challengequiz.js");
 } else if (pathArray[1] == "shootoutquiz" || pathArray[1] == "knockoutquiz") {
-	$.getScript("http://localhost/QATOOLS/myscripts - shootknockoutquiz.js");
+	$.getScript("https://gsergean.github.io/Github/myscripts - shootknockoutquiz.js");
 } else if (pathArray[1] == "quiz") {
 	console.log("Quiz=" + pathArray[2]);
-	$.getScript("http://localhost/QATOOLS/myscripts.js");
+	$.getScript("https://gsergean.github.io/Github/myscripts.js");
 } else {
 	console.log("Unknown Page " + pathArray[1]);
 };
