@@ -2,11 +2,6 @@
 <html>
 <head>
 <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
-</head>
-
-<body onload="SetVideoUrl()">
-    
-<iframe id="videoframe" width=500 height=400 src="" frameborder="0" allowfullscreen></iframe>
 
 <script>
 var w, h;
@@ -44,19 +39,40 @@ if (height == null) {
 };
 
 function SetVideoUrl() {
+    alert("SetVideoUrl()");
     var ifr = document.getElementById("videoframe");
-    //debugger;
+    debugger;
     ifr.width = w;
     ifr.height = h;
     ifr.src = "https://www.youtube.com/embed/" + yt_code + "?rel=0" + (start != "" && start != null ? "&start=" + start : "") 
                                                                     + (end != "" && end != null ? "&end=" + end : "") 
                                                                     + "&autoplay=1"
-                                                                    + "&mute=1";
+                                                                    + "&mute=0"
+                                                                    + "&enablejsapi=1&origin=https://gsergean.github.io";
     console.log(ifr.src);
     ifr.allow = "autoplay; encrypted-media";
     ifr.focus();
+
+    var btnPlay = document.querySelector("button.ytp-play-button");
+    if (btnPlay != null) {
+        btnPlay.click();
+            
+    }
 }
-</script>
+
+alert("Geert");
+    
+document.addEventListener("DOMContentLoaded", function(){
+    alert("Geert - DOMContentLoaded");
+});
+    
+    document.onload()
+</script>    
+</head>
+
+<body onload="SetVideoUrl()">
+    
+<iframe id="videoframe" width=500 height=400 src="" frameborder="0" allowfullscreen></iframe>
 
 </body>
 </html>

@@ -593,6 +593,10 @@ function SaveQuizPage() {
 		PrepareTips();
 
 		console.log("Step 14");
+		console.log("Execute: PrepareRondes()");
+		PrepareRondes();
+
+		console.log("Step 15");
 		el = document.querySelector("div.tip_right#tiptip_holder");
 		if (el == null) {
 			console.log("Element div.tip_right#tiptip_holder does not exist");

@@ -91,3 +91,23 @@ function PrepareTips() {
 	        }; 
         };
 }
+
+function PrepareRondes() {
+        var x, y, z;
+	var i, k;
+	t = "div.btn-group[role=group][aria-label=a]";
+        x = document.querySelector(t);
+	y = x.querySelectorAll("a.tiptip");
+	for (k = 0; k < y.length; k++) {
+		console.log(y[k].src);
+		$(y[k]).trigger("mouseenter");
+
+       	    	z = document.querySelector("div#tiptip_content > center");
+       	    	console.log(z.innerHTML);
+            	var e = document.createElement("DIV");
+       	    	e.innerHTML = z.innerHTML.replace("<br>", " -:- ");
+            	e.setAttribute("class", "RondeInfo");
+            	e.setAttribute("id", "Ronde_" + k+1);
+		x.parentNode.insertBefore(e, x.nextSibling);
+        }; 
+}
