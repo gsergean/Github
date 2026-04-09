@@ -150,7 +150,7 @@ function SaveWeekQuizPage() {
 			el.innerText = fr.src;
 			if (fr.parentElement.className == "video-container"
 				|| fr.parentElement.className == "embed-responsive-item"
-				|| fr.parentElement.className == "embed-responsive embed-responsive-16by9")
+				|| fr.parentElement.className == "embed-responsive embed-responsive-16by9"
 				|| fr.parentElement.className.match("qq2-video")) { 
 				console.log("1 - ClassName=video-container");
 				el.setAttribute("class", "youtube-movie-fullscreen");
@@ -480,7 +480,7 @@ function SaveQuizPage() {
 				|| fr.src.includes("http://www.youtube.com/")) {
 				let el = document.createElement("DIV");
 				el.innerText = fr.src;
-				if (fr.className == "embed-responsive-item") 
+				if (fr.className == "embed-responsive-item"
     				|| fr.parentElement.className.match("qq2-video")) { 
 					console.log("1 - ClassName=video-container");
 					el.setAttribute("class", "youtube-movie-fullscreen");
