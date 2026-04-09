@@ -159,7 +159,7 @@ function SaveWeekQuizPage() {
 				console.log("1 - ClassName=audio-container");
 				el.setAttribute("class", "youtube-movie-smallscreen");
 				el.setAttribute("height", "1");
-			} else if (fr.height == 300 && fr.width == 200) {
+            } else if (fr.height == 300 && fr.width == 200) {
 				console.log("2 - fr.height == 300 && fr.width == 200");
 				el.setAttribute("class", "youtube-movie-smallscreen");
 				el.setAttribute("height", "1");
@@ -489,7 +489,7 @@ function SaveQuizPage() {
 				    console.log("1 - ClassName=audio-container");
 				    el.setAttribute("class", "youtube-movie-smallscreen");
 				    el.setAttribute("height", "1");
-				} else {
+                } else {
 					console.log("1 - " + fr.height);
 					el.setAttribute("class", "youtube-movie-smallscreen");
 					el.setAttribute("height", "1");
