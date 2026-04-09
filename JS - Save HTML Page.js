@@ -112,8 +112,8 @@ function SaveWeekQuizPage() {
 	iNbrofElements = ChildCol.length;
 	for (i = 0; i < iNbrofElements; i++) { 
 		console.log("removing " + i + " " + ChildCol[i]);
-		el = ChildCol[i];
-		el.remove();
+		// el = ChildCol[i];
+		// el.remove();
 	};
 
 	console.log("Step 4");
@@ -150,10 +150,15 @@ function SaveWeekQuizPage() {
 			el.innerText = fr.src;
 			if (fr.parentElement.className == "video-container"
 				|| fr.parentElement.className == "embed-responsive-item"
-				|| fr.parentElement.className == "embed-responsive embed-responsive-16by9") { 
+				|| fr.parentElement.className == "embed-responsive embed-responsive-16by9")
+				|| fr.parentElement.className.match("qq2-video")) { 
 				console.log("1 - ClassName=video-container");
 				el.setAttribute("class", "youtube-movie-fullscreen");
 				el.setAttribute("height", "2");
+            } else if (fr.parentElement.className.match("qq2-audio")) { 
+				console.log("1 - ClassName=audio-container");
+				el.setAttribute("class", "youtube-movie-smallscreen");
+				el.setAttribute("height", "1");
 			} else if (fr.height == 300 && fr.width == 200) {
 				console.log("2 - fr.height == 300 && fr.width == 200");
 				el.setAttribute("class", "youtube-movie-smallscreen");
@@ -439,8 +444,8 @@ function SaveQuizPage() {
 		iNbrofElements = ChildCol.length;
 		for (i = 0; i < iNbrofElements; i++) { 
 			console.log("removing " + i + " " + ChildCol[i]);
-			el = ChildCol[i];
-			el.remove();
+			// el = ChildCol[i];
+			// el.remove();
 		};
 
 		console.log("Step 5");
@@ -475,10 +480,15 @@ function SaveQuizPage() {
 				|| fr.src.includes("http://www.youtube.com/")) {
 				let el = document.createElement("DIV");
 				el.innerText = fr.src;
-				if (fr.className == "embed-responsive-item") { 
+				if (fr.className == "embed-responsive-item") 
+    				|| fr.parentElement.className.match("qq2-video")) { 
 					console.log("1 - ClassName=video-container");
 					el.setAttribute("class", "youtube-movie-fullscreen");
 					el.setAttribute("height", "2");
+                } else if (fr.parentElement.className.match("qq2-audio")) { 
+				    console.log("1 - ClassName=audio-container");
+				    el.setAttribute("class", "youtube-movie-smallscreen");
+				    el.setAttribute("height", "1");
 				} else {
 					console.log("1 - " + fr.height);
 					el.setAttribute("class", "youtube-movie-smallscreen");
